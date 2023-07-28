@@ -30,18 +30,18 @@ breedSelector.addEventListener('change', handleBreedSelect);
 function handleBreedSelect(event) {
     loader.classList.replace('is-hidden', 'loader');
     catInfoContainer.classList.add('is-hidden');
-  
+   
     const breedId = event.currentTarget.value;
 
     fetchCatByBreed(breedId)
     .then(data => {
         loader.classList.replace('loader', 'is-hidden');
         breedSelector.classList.remove('is-hidden');
+        
         const { url, breeds } = data[0];
         
-        catInfoContainer.innerHTML = `<div class="photo container">
-        <img src="${url}" alt="${breeds[0].name}" width="400"/>
-        </div>
+        catInfoContainer.innerHTML = `
+        <img class="photo container" src="${url}" alt="${breeds[0].name}" width="400"/>
         <div class="text container">
         <h1>${breeds[0].name}</h1>
         <p>${breeds[0].description}</p>

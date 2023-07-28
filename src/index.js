@@ -46,7 +46,7 @@ function handleBreedSelect(event) {
         src="${url}" 
         alt="${breeds[0].name}" 
         width="400"
-        height="400"/>
+       />
 
         <div class="text container">
         <h1>${breeds[0].name}</h1>

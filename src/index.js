@@ -45,8 +45,9 @@ function handleBreedSelect(event) {
         <img class="photo container" 
         src="${url}" 
         alt="${breeds[0].name}" 
-        width="400"/>
-        
+        width="400"
+        height="400"/>
+
         <div class="text container">
         <h1>${breeds[0].name}</h1>
         <p>${breeds[0].description}</p>
